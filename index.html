@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANSYS 产品介绍</title>
+    <style>
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+
+        .align-center{
+          align-items: center;
+        }
+        .align-bottom{
+          align-items: flex-end;
+        }
+        .space-between{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .space-around{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+        }
+        .flex-start{
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+        .flex-end{
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+        }
+        .flex-top{
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+        .flex-wrap{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+        .flex-wrap-start{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+        }
+        .flex-center{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+
+        }
+
+        .flex-column{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        .flex-column-center{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background-color: #F9F9F9;
+        }
+
+        .header{
+          height: 720px;
+          background-color: #000;
+          overflow: hidden;
+        }
+
+        .content{
+          width: 1400px;
+          margin: 0 auto;
+        }
+
+        .header_tab{
+          background-color: rgba(255, 255, 255, .06);
+          border-bottom: 1px solid rgba(255, 255, 255, .06);
+        }
+
+        .logo{
+          color: #fff;
+          font-size: 20px;
+          font-weight: bold;
+          font-family: 'AlibabaPuHuiTi';
+        }
+
+        .logo img{
+          width: 34px;
+          height: 35px;
+          margin-right: 12px;
+        }
+
+        .phone{
+          background-color: #FFBE48;
+          color: #000;
+          height: 60px;
+          line-height: 60px;
+          padding: 0 16px;
+        }
+
+
+        .brief{
+          padding-top: 118px;
+        }
+
+        .brief_text{
+          width: 670px;
+          color: #fff;
+          font-size: 24px;
+          line-height: 36px;
+        }
+
+        .brief_logo{
+          height: 55px;
+          /* width: 120px; */
+          /* background-color: #FFA600; */
+          margin-bottom: 60px;
+        }
+
+        .brief_poster{
+          width: 620px;
+          position: relative;
+          top: -100px;
+          /* background-color: #6E9FA6; */
+        }
+
+        .service{
+          padding-top: 120px;
+        }
+
+        .service_title{
+          font-size: 32px;
+          color: #000;
+          text-align: center;
+          font-weight: bold;
+        }
+        
+        .service_tip{
+          font-size: 16px;
+          color: #333;
+          text-align: center;
+          padding-top: 24px;
+        }
+
+        .service_tab{
+          padding: 40px 0 80px;
+          width: 1100px;
+          margin: 0 auto;
+        }
+        .service_tab button{
+          height: 40px;
+          font-size: 16px;
+          color: #666;
+          border-radius: 20px;
+          text-align: center;
+          line-height: 40px;
+          padding: 0 20px;
+          border: 1px solid #666;
+          cursor: pointer;
+          background-color: #F9F9F9;
+        }
+
+        .tab_btn:hover {
+            background-color: rgba(55,65,81, .1);
+        }
+
+        .service_tab .tab_active{
+          background-color: #FFBE48;
+          color: #000;
+          border-color: #FFBE48;
+          font-weight: bold;
+        }
+        
+
+
+        .list_card{
+          width: 330px;
+          height: 400px;
+          padding: 20px;
+          border-radius: 10px;
+          background-color: #fff;
+          border: 1px solid #eee;
+          margin-bottom: 27px;
+          transition: all 0.3s;
+        }
+
+        .sitg{
+          width: 330px;
+        }
+        
+        .list_card:hover{
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(255, 255, 255, .06);
+        }
+
+        .list_logo{
+          width: 36px;
+          height: 36px;
+          margin-bottom: 16px;
+        }
+
+        .list_title{
+          font-size: 28px;
+          color:#000;
+          font-weight: bold;
+        }
+        
+        .list_tip{
+          font-size: 20px;
+          color: #000;
+        }
+
+        .list_content{
+          font-size: 14px;
+          color: #333;
+          text-align: justify;
+          line-height: 22px;
+        }
+
+        .list_content p{
+          padding-top: 20px;
+        }
+
+        .foot{
+          background-color: #000000;
+          height: 360px;
+          margin-top: 220px;
+          padding-top: 80px;
+          color: #fff;
+        }
+
+        .foot_name{
+          font-size: 32px;
+          font-weight: bold;
+          margin-bottom: 65px;
+        }
+
+        .foot_phone, .foot_address{
+          font-size: 16px;
+          margin-bottom: 24px;
+        }
+
+        .foot_code img{
+          width: 140px;
+          height: 140px;
+        }
+
+        .foot_code p{
+          text-align: center;
+          font-size: 16px;
+          color: #fff;
+          padding-top: 15px;
+        }
+   
+    </style>
+</head>
+<body>
+    <div class="header">
+
+     <div class="header_tab">
+      <div class="content space-between align-center">
+        <div class="logo flex-start align-center">
+          <!-- <img src="" alt=""> -->
+          <div>赛思数智</div>
+        </div>
+
+        <div class="phone">联系电话 - 186 2035 5952</div>
+      </div>
+     </div>
+      <div class="content">
+
+        <div class="brief space-between">
+          <div class="brief_text">
+            <img class="brief_logo" src="./imgs/logo_ansys@2x.png" alt="">
+            <div>
+              ANSYS软件是美国大型通用仿真分析软件，包含结构、流体、电场、磁场、声场分析等各大学科专业模块，已在核工业、铁道、石油化工、航空航天、机械、土木工程、船舶、能源、汽车交通、电子、生物医学、家电等领域有着广泛的应用。
+            </div>
+            <div>
+              深圳赛思数智科技有限公司作为ANSYS软件代理商，为您提供ANSYS软件工程仿真一站式服务。
+            </div>
+          </div>
+
+          <img class="brief_poster" src="./imgs/img_banner@2x.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="service content">
+      <div class="service_title">Ansys软件服务</div>
+      <div class="service_tip">Ansys产品线覆盖结构力学、流体动力学、电磁场分析等多个领域，欢迎联系我们了解更多</div>
+
+      <div class="service_tab space-between align-center">
+        <button class="tab_btn tab_active" onclick="toggleActive(1)">全部软件</button>
+        <button class="tab_btn" onclick="toggleActive(2)">结构力学</button>
+        <button class="tab_btn" onclick="toggleActive(3)">流体动力学</button>
+        <button class="tab_btn" onclick="toggleActive(4)">电磁与电子</button>
+        <button class="tab_btn" onclick="toggleActive(5)">多物理场与系统</button>
+        <button class="tab_btn" onclick="toggleActive(6)">设计与优化</button>
+        <button class="tab_btn" onclick="toggleActive(7)">行业专用</button>
+      </div>
+
+      <div id="service_content" class="flex-wrap"></div>
+    </div>
+
+    <div class="foot">
+      <div class="content space-between">
+        <div class="">
+          <div class="foot_name">深圳赛思数智科技有限公司</div>
+          <div class="foot_phone">联系电话：186 2035 5952  邓先生</div>
+          <div class="foot_address">地址：深圳市福田区华强北街道华航社区中航路18号新亚洲国利大厦1542</div>
+        </div>
+
+        <div class="foot_code">
+          <img src="./imgs/img_qrcode@2x.png" alt="">
+          <p>扫一扫立即咨询</p>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
+
+<script>
+  const data = [
+      ` <div class="list_card">
+          <img class="list_logo" src="./imgs/icon_1@2x.png" alt="">
+          <div class="list_title">ANSYS Fluent</div>
+          <div class="list_tip">流体动力学仿真软件</div>
+          <div class="list_content">
+            <p>● 简介：Fluent是ANSYS旗下最知名的计算流体动力学 (CFD) 软件，广泛应用于工业领域的流动、传热、化学反应及多相流模拟。它支持复杂物理模型的构建，如航空声学、涡轮机械、燃烧分析等，且具有高精度求解器和强大的后处理功能。</p>
+            <p>● 特点：集成于ANSYS Workbench平台，支持多场耦合分析 (如与结构力学的双向交互) ，适用于从新手到专家的多层次用户需求。</p>
+          </div>
+        </div>
+      `,
+
+      ` <div class="list_card">
+          <img class="list_logo" src="./imgs/icon_2@2x.png" alt="">
+          <div class="list_title">ANSYS Mechanical</div>
+          <div class="list_tip">结构力学仿真软件</div>
+          <div class="list_content">
+            <p>● 简介：作为全球用户最多的结构CAE软件，Mechanical提供线性/非线性结构分析、热力学分析、振动模态分析等功能，尤其擅长复杂材料的非线性行为模拟（如大变形、接触问题）。</p>
+            <p>● 特点：与Fluent、Maxwell等模块无缝集成，支持电磁-流体-结构多物理场耦合分析，广泛应用于机械、汽车、航空航天领域。
+            </p>
+          </div>
+        </div>
+      `,
+
+      ` <div class="list_card">
+          <img class="list_logo" src="./imgs/icon_3@2x.png" alt="">
+          <div class="list_title">ANSYS Workbench</div>
+          <div class="list_tip">仿真集成平台</div>
+          <div class="list_content">
+            <p>● 简介：Workbench是ANSYS的核心仿真环境，整合了Mechanical、Fluent、CFX、LS-DYNA等模块，提供统一的建模、求解和后处理流程。</p>
+            <p>● 特点：支持参数化设计和自动化脚本，显著提升仿真效率，尤其适合多学科协同优化。</p>
+          </div>
+        </div>
+      `,
+
+      `<div class="list_card">
+          <img class="list_logo" src="./imgs/icon_5@2x.png" alt="">
+          <div class="list_title">ANSYS Maxwell</div>
+          <div class="list_tip">电磁场仿真软件</div>
+          <div class="list_content">
+            <p>● 简介：专用于低频电磁场分析，适用于电机、变压器、传感器等设备的电磁设计，支持静磁场、瞬态场和谐波分析。</p>
+            <p>● 特点：与Mechanical耦合可进行电磁-热-结构多物理场仿真，广泛应用于电子和电力行业。</p>
+          </div>
+        </div>`,
+
+      ` <div class="list_card">
+          <img class="list_logo" src="./imgs/icon_2@2x.png" alt="">
+          <div class="list_title">ANSYS LS-DYNA</div>
+          <div class="list_tip">显式动力学分析软件</div>
+          <div class="list_content">
+            <p>● 简介：主要用于瞬态冲击、爆炸、碰撞等高度非线性问题，如汽车碰撞安全性和金属成形工艺模拟[8] [22]。</p>
+            <p>● 特点：基于显式时间积分算法，处理复杂动态事件时兼具精度与效率。</p>
+          </div>
+        </div>`,
+
+      `<div class="list_card">
+          <img class="list_logo" src="./imgs/icon_5@2x.png" alt="">
+          <div class="list_title">ANSYS HFSS</div>
+          <div class="list_tip">高频电磁场仿真工具</div>
+          <div class="list_content">
+            <p>● 简介：专注于三维全波电磁场仿真。凭借其精确的电磁场求解能力、多物理场耦合优势及广泛的应用场景，成为高频电子设计不可或缺的工具。</p>
+            <p>● 特点：多算法支持，多物理场耦合，具有高效的计算技术。广泛应用于天线设计、射频/微波组件、高速互连结构、集成电路（IC）封装及印刷电路板（PCB）等领域，支持从芯片级到系统级的复杂电磁问题分析。</p>
+          </div>
+        </div>`,
+
+      ` <div class="list_card">
+          <img class="list_logo" src="./imgs/icon_4@2x.png" alt="">
+          <div class="list_title">ANSYS Discovery</div>
+          <div class="list_tip">实时仿真工具</div>
+          <div class="list_content">
+            <p>● 简介：面向设计工程师的实时仿真工具，可在设计阶段快速验证流体、结构和热性能，支持交互式参数调整和即时结果可视化。</p>
+            <p>● 特点：无需网格划分经验，GPU加速计算实现秒级反馈，适合概念设计优化。</p>
+          </div>
+        </div>`,
+
+      ` <div class="list_card">
+          <img class="list_logo" src="./imgs/icon_4@2x.png" alt="">
+          <div class="list_title">ANSYS SpaceClaim</div>
+          <div class="list_tip">几何建模与修复工具</div>
+          <div class="list_content">
+            <p>● 简介：直接建模软件，用于快速几何清理、修复和简化，支持CAD文件导入和逆向工程。</p>
+            <p>● 特点：与Workbench深度集成，显著缩短仿真前处理时间，尤其适用于复杂装配体处理。</p>
+          </div>
+        </div>`,
+
+      ` <div class="list_card">
+          <img class="list_logo" src="./imgs/icon_5@2x.png" alt="">
+          <div class="list_title">ANSYS Icepak</div>
+          <div class="list_tip">电子散热仿真软件</div>
+          <div class="list_content">
+            <p>● 简介：专注于电子设备热管理的CFD工具，可模拟PCB板、芯片、机箱等散热问题。</p>
+            <p>● 特点：支持焦耳热、风扇曲线、辐射换热等电子行业专用模型，广泛应用于消费电子和电力设备设计。</p>
+
+          </div>
+        </div>`,
+
+      `<div class="list_card">
+          <img class="list_logo" src="./imgs/icon_6@2x.png" alt="">
+          <div class="list_title">ANSYS SCADE</div>
+          <div class="list_tip">嵌入式系统开发工具</div>
+          <div class="list_content">
+            <p>● 简介：基于模型的嵌入式软件开发工具，涵盖航空、汽车等领域的安全关键系统开发。</p>
+            <p>● 特点：符合DO-178C/IEC 61508等安全标准，支持自动代码生成和形式化验证。</p>
+          </div>
+        </div>`,
+
+      ` <div class="list_card">
+          <img class="list_logo" src="./imgs/icon_2@2x.png" alt="">
+          <div class="list_title">ANSYS Sherlock</div>
+          <div class="list_tip">电子可靠性分析工具</div>
+          <div class="list_content">
+            <p>● 简介：专注于在早期设计阶段预测电子硬件的寿命和失效风险。模拟电子产品在热、机械冲击、振动等环境应力下的性能。帮助工程师缩短研发周期并降低成本。</p>
+            <p>● 特点：快速建模与自动化分析，多物理场耦合与集成，高效算法与行业适配性，适用于汽车电子、航空航天等领域。</p>
+          </div>
+        </div>`,
+
+      `<div class="list_card">
+          <img class="list_logo" src="./imgs/icon_3@2x.png" alt="">
+          <div class="list_title">ANSYS Twin Builder</div>
+          <div class="list_tip">数字孪生平台</div>
+          <div class="list_content">
+            <p>● 简介：面向系统级多物理域仿真的数字孪生平台，支持构建和部署虚拟模型以映射真实资产的运行状态。其核心功能覆盖从设计阶段的系统验证到运维阶段的预测性维护。</p>
+            <p>● 特点：多物理域建模，使用降阶模型（ROM）技术，集成物联网。广泛应用于机电一体化、电力电子及工业物联网领域。</p>
+          </div>
+        </div>`,
+
+    ]
+
+  function toggleActive(buttonIndex) {
+    
+     // 获取所有按钮
+    const buttons = document.querySelectorAll('.service_tab button');
+    // 移除所有按钮的 active 类名
+    buttons.forEach(button => button.classList.remove('tab_active'));
+    // 为点击的按钮添加 active 类名
+    buttons[buttonIndex - 1].classList.add('tab_active');
+
+    // 根据按钮索引切换内容
+    const contentDiv = document.getElementById('service_content');
+    let contents = ''
+
+    switch (buttonIndex) {
+      case 1:
+        contents = data.join(' ')
+        break;
+      case 2:
+        const arr2 = [data[1], data[4], data[10], , `<div class='sitg'></div>`]
+        contents = arr2.join('')
+        break;
+      case 3:
+        const arr3 = [data[0], `<div class='sitg'></div>`, `<div class='sitg'></div>`, `<div class='sitg'></div>`]
+        contents = arr3.join('')
+        break;
+      case 4:
+        const arr4 = [data[5], data[3], data[8], `<div class='sitg'></div>`]
+        contents = arr4.join('')
+        break;
+      case 5:
+        const arr5 = [data[2], data[11], `<div class='sitg'></div>`, `<div class='sitg'></div>`]
+        contents = arr5.join('')
+        break;
+      case 6:
+        const arr6 = [data[7], data[6], `<div class='sitg'></div>`, `<div class='sitg'></div>`]
+        contents = arr6.join('')
+        break;
+      case 7:
+        const arr7 = [data[9], `<div class='sitg'></div>`, `<div class='sitg'></div>`, `<div class='sitg'></div>`]
+        contents = arr7.join('')
+        break;
+    }
+
+
+    contentDiv.innerHTML = contents;
+  }
+
+  // 默认显示第一个内容
+  toggleActive(1)
+</script>
